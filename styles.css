@@ -1,0 +1,109 @@
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background-color: #f2f2f2;
+}
+
+#header {
+  background: linear-gradient(135deg, #4caf50, #81c784);
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+#map {
+  width: 100%;
+  height: 40vh;
+}
+
+.stats-row {
+  background: #fff;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-align: center;
+  padding: 12px;
+  border-bottom: 1px solid #ccc;
+}
+
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+
+.button-row button {
+  flex: 1 1 40%;
+  min-width: 120px;
+  padding: 12px;
+  font-size: 1em;
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s ease;
+}
+
+.green { background: #4caf50; }
+.green button { background: #388e3c; }
+
+.blue { background: #2196f3; }
+.blue button { background: #1976d2; }
+
+.purple { background: #9c27b0; }
+.purple button { background: #7b1fa2; }
+
+.orange { background: #ff9800; }
+.orange button { background: #f57c00; }
+
+.gray { background: #607d8b; }
+.gray button { background: #455a64; }
+
+.sessions {
+  margin: 20px;
+}
+
+.sessions h3 {
+  font-size: 1.1em;
+  margin-bottom: 6px;
+}
+
+#savedSessionsList {
+  list-style: none;
+  padding: 0;
+}
+
+#savedSessionsList li {
+  background: #e6f3ff;
+  margin: 4px 0;
+  padding: 10px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#savedSessionsList li button {
+  background-color: #2196f3;
+  border: none;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+@media (max-width: 600px) {
+  .button-row button {
+    flex: 1 1 100%;
+  }
+  #map {
+    height: 50vh;
+  }
+}

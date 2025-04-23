@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nature Tracker</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header id="header">
+    <h1>🌿 Nature Tracker</h1>
+  </header>
+
+  <div id="map"></div>
+
+  <div id="controls">
+    <div class="stats-row">
+      ⏱ <span id="timer">00:00:00</span> |
+      📏 <span id="distance">0.00 km</span>
+    </div>
+
+    <div class="button-row green">
+      <button onclick="startTracking()">▶️ Start</button>
+      <button onclick="togglePause()"><span id="pauseButtonLabel">⏸ Pause</span></button>
+      <button onclick="stopTracking()">⏹ Stop</button>
+    </div>
+
+    <div class="button-row blue">
+      <button onclick="addTextNote()">📝 Note</button>
+      <button onclick="capturePhoto()">📸 Photo</button>
+      <button onclick="startAudioRecording()">🎤 Audio</button>
+      <button onclick="captureVideo()">🎥 Video</button>
+    </div>
+
+    <div class="button-row purple">
+      <button onclick="showRouteDataOnMap()">📍 Show Map Notes</button>
+    </div>
+
+    <div class="button-row orange">
+      <button onclick="saveSession()">💾 Save</button>
+      <button onclick="generateShareableLink()">🔗 Share</button>
+    </div>
+
+    <div class="button-row gray">
+      <button onclick="exportData()">📄 JSON</button>
+      <button onclick="exportPDF()">📄 PDF</button>
+      <button onclick="exportGPX()">📍 GPX</button>
+    </div>
+
+    <div class="sessions">
+      <h3>📂 Saved Routes</h3>
+      <ul id="savedSessionsList"></ul>
+    </div>
+  </div>
+
+  <input type="file" accept="image/*" capture="environment" id="photoInput" style="display: none" />
+  <input type="file" accept="video/*" capture id="videoInput" style="display: none" />
+
+  <script src="app.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB4IoUFBPNGtVySKpFoqE9VITvGV7nkLHw&callback=initMap"
+    async defer></script>
+</body>
+</html>
