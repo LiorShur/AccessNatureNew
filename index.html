@@ -20,7 +20,7 @@
       📏 <span id="distance">0.00 km</span>
     </div>
 
-    <div class="button-row green">
+<!--     <div class="button-row green">
       <button onclick="startTracking()">▶️ Start</button>
       <button onclick="togglePause()"><span id="pauseButtonLabel">⏸ Pause</span></button>
       <button onclick="stopTracking()">⏹ Stop</button>
@@ -47,6 +47,39 @@
       <button onclick="exportPDF()">📄 PDF</button>
       <button onclick="exportGPX()">📍 GPX</button>
     </div>
+ -->
+
+    <div class="button-row">
+  <button onclick="startTracking()">Start</button>
+  <button onclick="togglePause()" id="pauseButtonLabel">Pause</button>
+  <button onclick="stopTracking()">Stop</button>
+</div>
+
+<div class="button-row">
+  <button onclick="exportRouteSummary()">Export Route Summary</button>
+  <button onclick="exportAllRoutes()">Export All Routes</button>
+  <button onclick="window.open('explorer.html')">Explorer</button>
+</div>
+
+<div class="button-row">
+  <button onclick="addTextNote()">Take Note</button>
+  <button onclick="capturePhoto()">Take Photo</button>
+</div>
+
+<div class="button-row">
+  <button onclick="showRouteDataOnMap()">Show Map Notes</button>
+</div>
+
+<div class="button-row">
+  <button onclick="saveSession()">Save</button>
+  <button onclick="generateShareableLink()">Share</button>
+</div>
+
+<div class="button-row">
+  <button onclick="exportData()">Export JSON</button>
+  <button onclick="exportGPX()">Export GPX</button>
+  <button onclick="exportPDF()">Export PDF</button>
+</div>
 
     <div class="sessions">
       <h3>📂 Saved Routes</h3>
