@@ -28,7 +28,7 @@ body {
   border-bottom: 1px solid #ccc;
 }
 
-.button-row {
+/* .button-row {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -36,7 +36,23 @@ body {
   padding: 10px;
   margin-bottom: 10px;
   border-radius: 8px;
+} */
+
+.button-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 8px;
 }
+
+.button-row:nth-child(1) { background-color: #e3f2fd; } /* Light Blue */
+.button-row:nth-child(2) { background-color: #fff3e0; } /* Light Orange */
+.button-row:nth-child(3) { background-color: #e8f5e9; } /* Light Green */
+.button-row:nth-child(4) { background-color: #fce4ec; } /* Light Pink */
+.button-row:nth-child(5) { background-color: #f3e5f5; } /* Light Purple */
+.button-row:nth-child(6) { background-color: #fbe9e7; } /* Light Coral */
 
 .button-row button {
   flex: 1 1 40%;
@@ -49,6 +65,20 @@ body {
   cursor: pointer;
   font-weight: bold;
   transition: background 0.2s ease;
+}
+button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  margin: 6px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+button:hover {
+  background-color: #45a049;
 }
 
 .green { background: #4caf50; }
