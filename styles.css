@@ -41,11 +41,14 @@ body {
 .button-row {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
+  align-items: center;
+  flex-wrap: nowrap; /* ✅ No wrapping even if narrow */
   margin: 10px 0;
   padding: 10px;
   border-radius: 8px;
+  overflow-x: auto; /* ✅ allow horizontal scroll if absolutely necessary */
 }
+
 
 .button-row:nth-child(1) { background-color: #e3f2fd; } /* Light Blue */
 .button-row:nth-child(2) { background-color: #fff3e0; } /* Light Orange */
@@ -55,16 +58,21 @@ body {
 .button-row:nth-child(6) { background-color: #fbe9e7; } /* Light Coral */
 
 .button-row button {
-  flex: 1 1 40%;
-  min-width: 120px;
-  padding: 12px;
-  font-size: 1em;
+  flex: 1 1 auto; /* ✅ Let buttons shrink a bit if needed */
+  min-width: 80px; /* ✅ Minimum width for touch comfort */
+  margin: 6px;
+  padding: 10px 12px;
+  font-size: 16px;
   border: none;
+  background-color: #4CAF50;
+  color: white;
   border-radius: 6px;
-  color: #fff;
   cursor: pointer;
-  font-weight: bold;
-  transition: background 0.2s ease;
+  transition: background-color 0.3s ease;
+}
+
+.button-row button:hover {
+  background-color: #45a049;
 }
 button {
   background-color: #4CAF50;
@@ -135,5 +143,10 @@ button:hover {
   }
   #map {
     height: 50vh;
+  }
+}
+@media (max-width: 320px) {
+  .button-row {
+    overflow-x: scroll;
   }
 }
